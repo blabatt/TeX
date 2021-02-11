@@ -1,0 +1,110 @@
+\section{Control}
+
+\subsection*{Content}
+\mycolX{40mm}{\code{\textbackslash input\{file.tex\}}} \% insert content \\
+\mycolX{40mm}{\code{\textbackslash include\{file.tex\}}} \% see diff \href{https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include}{here} \\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\smash{Logical Primitives\textsuperscript{\textdagger}}}
+
+{\scriptsize\begin{tabular}{@{}l l l l l}
+    \textbf{else}            &
+    \textbf{fi}              &
+    \textbf{if}              &
+    \textbf{ifcase}          &
+    \textbf{ifcat}           \\
+    \textbf{ifdim}           &
+    \textbf{ifeof}           &
+    \textbf{iffalse}         &
+    \textbf{ifhbox}          &
+    \textbf{ifhmode}         \\
+    \textbf{ifinner}         &
+    \textbf{ifmmode}         &
+    \textbf{ifnum}           &
+    \textbf{ifodd}           &
+    \textbf{iftrue}          \\
+    \textbf{ifvbox}          &
+    \textbf{ifvmode}         &
+    \textbf{ifvoid}          &
+    \textbf{ifx}             &
+    \textbf{or}              \\
+\end{tabular}} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\smash{Macro Primitives\textsuperscript{\textdagger}}}
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textbf{\primtex{aft.assign.}}         &
+    \textbf{\primtex{aft.group}}           &
+    \textbf{\primtex{begingroup}}          &
+    \textbf{\primtex{csname}}              \\
+    \textbf{\primtex{def}}                 &
+    \textbf{\primtex{edef}}                &
+    \textbf{\primtex{endcsname}}           &
+    \textbf{\primtex{endgroup}}            \\
+    \textbf{\primtex{expandaft.}}          &
+    \textbf{\primtex{futurelet}}           &
+    \textbf{\primtex{gdef}}                &
+    \textbf{\primtex{global}}              \\
+    \textit{\primtex{globaldefs}}          &
+    \textbf{\primtex{let}}                 &
+    \textbf{\primtex{long}}                &
+    \textbf{\primtex{noexpand}}            \\
+    \textbf{\primtex{outer}}               &
+    \textbf{\primtex{relax}}               &
+    \textbf{\primtex{the}}                 &
+    \textbf{\primtex{xdef}}                \\
+\end{tabular}} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\smash{Register Primitives\textsuperscript{\textdagger}}}
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textbf{advance}             &
+    \textit{count}               &
+    \textbf{countdef}            &
+    \textit{dimen}               \\
+    \textbf{dimendef}            &
+    \textbf{divide}              &
+    \textbf{multiply}            &
+    \textit{skip}                \\
+    \textbf{skipdef}             &
+    \textit{toks}                &
+    \textbf{toksdef}             &
+\end{tabular}} \\
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Variables \& Parameters}
+
+\entry{40mm}{\textbackslash def\textbackslash x\{5.0\}}{simple replace}\\
+\entry{40mm}{\textbackslash def\textbackslash double\#1\{\#1*2\}}{one param}\\
+\entry{40mm}{\textbackslash def\textbackslash times\#1\#2\{\#1*\#2\}}{multip. params}\\
+\entry{51mm}{\textbackslash definecolor\textbackslash \{grn\}\{HTML\}\{228822\}}{colors}\\
+\entry{51mm}{\textbackslash colorlet\textbackslash \{prpl\}\{purple!80!pink\}}{ibid}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Environments}
+\textit{Define new environment, 1 parameter:}\\
+\entry{40mm}{\textbackslash newenvironment\{myenv\}[1]}{one param}\\
+\entry{40mm}{\phantom{\quad}\{\dots\}}{initializ. cmds}\\
+\entry{40mm}{\phantom{\quad}\{\dots\}}{closing cmds}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Functions}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Looping}
+\ \\
+

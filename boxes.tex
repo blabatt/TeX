@@ -1,0 +1,137 @@
+\section{Alignment}
+\textit{\TeX\ \say{glues} horizontal and then vertical \say{boxes} together to make lines, paragraphs / pages (respectively). \TeX\ \smash{primitives\textsuperscript{\textdagger}} (\textbf{cmds} \& \textit{params}) afford fine-grained control of placement.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://en.wikibooks.org/wiki/LaTeX/Boxes}{Boxes}\textsuperscript{\textdagger}}
+
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textit{badness}         &
+    \textbf{box}             &
+    \textit{boxmaxdepth}     &
+    \textbf{cleaders}        \\
+    \textbf{copy}            &
+    \textit{dp}              &
+    \textit{everyhbox}       &
+    \textit{everyvbox}       \\
+    \textit{hbadness}        &
+    \textbf{hbox}            &
+    \textit{hfuzz}           &
+    \textbf{hrule}           \\
+    \textit{ht}              &
+    \textbf{lastbox}         &
+    \textbf{leaders}         &
+    \textit{overfullrule}    \\
+    \textit{prevdepth}       &
+    \textbf{setbox}          &
+    \textbf{unhbox}          &
+    \textbf{unhcopy}         \\
+    \textbf{unvbox}          &
+    \textbf{unvcopy}         &
+    \textit{vbadness}        &
+    \textbf{vbox}            \\
+    \textit{vfuzz}           &
+    \textbf{vrule}           &
+    \textbf{vtop}            &
+    \textit{wd}              \\
+    \textbf{xleaders}        &
+\end{tabular}} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Glue\textsuperscript{\textdagger}}
+
+{\scriptsize\begin{tabular}{@{}l l l l l l}
+    \textbf{hfil}               &
+    \textbf{hfill}              &
+    \textbf{hfilneg}            &
+    \textbf{hskip}              &
+    \textbf{hss}                &
+    \textbf{unskip}             \\
+    \textbf{vfil}               &
+    \textbf{vfill}              &
+    \textbf{vfilneg}            &
+    \textbf{vskip}              &
+    \textbf{vss}                &
+    \textit{lastskip}           \\
+\end{tabular}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Pages\textsuperscript{\textdagger}}
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textit{hoffset}         &
+    \textit{maxdepth}        &
+    \textit{pagedepth}       &
+    \textit{p'filllstretch}  \\
+    \textit{p'fillstretch}   &
+    \textit{p'filstretch}    &
+    \textit{pagegoal}        &
+    \textit{pageshrink}      \\
+    \textit{pagestretch}     &
+    \textit{pagetotal}       &
+    \textit{topskip}         &
+    \textit{voffset}         \\
+    \textit{vsize}           &
+\end{tabular}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Paragraphs\textsuperscript{\textdagger}}
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textit{adjdemerits}         &
+    \textit{baselineskip}        &
+    \textit{d'blhyp.d's}         &
+    \textit{emerg.stretch}       \\
+    \textit{fin.hyph.d's}        &
+    \textit{hangafter}           &
+    \textit{hsize}               &
+    \textbf{ignorespaces}        \\
+    \textbf{indent}              &
+    \textit{leftskip}            &
+    \textit{lineskip}            &
+    \textit{linesk.lim}          \\
+    \textit{looseness}           &
+    \textbf{noboundary}          &
+    \textbf{noindent}            &
+    \textbf{par}                 \\
+    \textit{parfillskip}         &
+    \textit{parindent}           &
+    \textit{parshape}            &
+    \textit{parskip}             \\
+    \textit{pretolerance}        &
+    \textit{prevgraf}            &
+    \textit{rightskip}           &
+    \textit{spacefactor}         \\
+    \textit{spaceskip}           &
+    \textit{tolerance}           &
+    \textbf{vadjust}             &
+    \textit{xspaceskip}          \\   
+\end{tabular}}
+
+
+
+%\entry{35mm}{}{}\\
+%\entry{35mm}{}{}\\
+%\entry{35mm}{}{}\\
+%\entry{35mm}{}{}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{parbox\textsuperscript{\LaTeX}}
+\textit{Where pos $\in$ [\underline{t}op|\underline{b}ot|\underline{c}ent]}\\
+\code{\textbackslash parbox[pos][height][contentpos]?\{width\}\{text\} }\\[1mm]
+\entry{30mm}{\textbackslash parbox[t][2cm]\{\dots\}}{\ul{t}op-align, 2cm high}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{minipage\textsuperscript{\LaTeX}}
+\entry{40mm}{\textbackslash begin\{minipage\}\{3cm\}[t]\dots}{\ul{t}op-align}\\
+
+
+\ \\ 

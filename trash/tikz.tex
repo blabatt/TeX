@@ -1,0 +1,136 @@
+\section{\href{http://mirrors.ctan.org/graphics/pgf/base/doc/pgfmanual.pdf}{Tikz}}
+
+\subsection*{Picture Settings}
+\begin{minipage}{6cm}
+At beginning:\\
+\begin{lstlisting}
+\begin{tikzpicture}[<setting>*]
+\end{lstlisting}
+... or mid-course:\\
+\begin{lstlisting}
+\tcbset{<setting>*}
+\end{lstlisting}
+\end{minipage}
+
+Possible settings include: 
+\begin{itemize}
+    \item remember picture
+    \item overlay
+    \item \mathrm{[x|y] = (coord)}
+\end{itemize}
+\ \\
+
+\subsection*{Styles \& Aliases}
+\begin{code}{6}
+\begin{lstlisting}
+\begin{tikzpicture}
+    [<alias>/.style={<style>*}]
+\end{lstlisting}
+\end{code} \\
+
+Possible styles include: \\
+\begin{tabularx}{5cm}{l l}
+    style & example val \\
+    \hline \\
+    inner sep & 2pt\\
+    text & green \\
+    font & small \\
+    anchor & west \\
+    align & \\
+    pos & .5 \\
+    decorate & --\\
+    decoration & snake \\
+    fill & green \\
+    color & green\\
+    draw & green \\
+    rounded corners & \\
+\end{tabularx} \\
+
+\subsection*{Nodes}
+\begin{code}{6.5}
+\begin{lstlisting}
+\begin{node}[<setting>*](<title>)
+\end{lstlisting}
+\end{code} \\
+\begin{tabularx}{4cm}{r l}
+    setting & example \\
+    \hline
+    anchor & west \\
+    align & right|justify \\
+    text width & .85cm \\
+    pos & .5 \\
+    below of & my\_node \\
+    text depth & 5.7cm \\
+    label & \{xshift=.5mm\} \\
+    shape & rectangle callout \\ 
+\end{tabularx} \\
+
+
+\subsection*{Paths \& Draws}
+\begin{code}{6.5}
+\begin{lstlisting}
+\[fill]draw[<setting>*]
+  (<from>) -- (<to>) [-- (<to>)]*;
+\end{lstlisting}
+\end{code}
+<from> \& <to> are coordinates (see below). Joiners like (<a>) -- (<to>) can also connect at right angles, like: (<from>) -| (<to>) or (<from>) |- (<to>). Possible settings include: \\
+\begin{tabularx}{4cm}{l l}
+    setting & desc. \\
+    \hline
+    -> & unidirect. arrow \\
+    <-> & double arrow \\
+    >={<head>[option]} & arrow-head \\ 
+\end{tabularx} \\
+Arrow <head>s include permutations of:
+\begin{itemize}
+    \item \{stealth\}
+    \item \{stealth\textquotesingle\}
+    \item \{open triangle 45\}
+    \item \{latex reversed double\}
+\end{itemize}
+... and options such as: 
+\begin{itemize}
+    \item width
+    \item length
+\end{itemize}
+\begin{code}{6.5}
+Another method:
+\begin{lstlisting}
+\path[<setting>*]
+  (<from>) edge[<setting>*] (<to>);
+\end{lstlisting}
+... where settings $\in$: \\
+\begin{itemize}
+    \item out|in=<degrees>
+    \item bend right|left=<degrees>
+\end{itemize}
+\end{code}
+
+\ \\
+
+\subsection*{Coordinates}
+Referencing coordinates: \\
+\begin{tabularx}{4cm}{l l}
+    type & example \\
+    \hline 
+    named & (my\_coord) \\
+    anchor & (my\_node.north east) \\
+    absolute & (1,-3) \\
+    relative & ++(2,2) \\
+    tween & (node\_a)!.25!(node\_b) \\
+    math & \$(my\_name) + (1,3)\$ \\
+    intersect & (<coor\_a> -| <coord\_b>)
+\end{tabularx}
+
+Declaring / naming coordinates: \\
+\begin{tabular}{l}
+\begin{lstlisting}
+\coordinate()
+\end{lstlisting} \\
+\begin{lstlisting}
+\draw(a)--(b) coordinate(<coord>);
+\end{lstlisting} \\
+\end{tabular}
+
+
+\ \\

@@ -1,0 +1,52 @@
+\section{\href{http://mirrors.ctan.org/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf}{Circuitikz}}
+
+\begin{minipage}{6.5cm}
+\begin{lstlisting}
+\usepackage{circuitikz}
+\begin{circuitikz}[american]
+  \draw (<point>) 
+  node[<e_type>?,<e_opt>*]?
+  [
+    to[ <wire_opt>*,
+        <e_type>?,
+        <e_opt>*   ] 
+    node[<e_type>,<e_opt>*]? 
+    (<point>)?     
+  ]*
+\end{lstlisting}
+\end{minipage} \\
+... where <wire\_opt> $\in$: 
+\begin{itemize}
+    \item short
+    \item {[*|o]}-[*|o]
+    \item i[>\_]?= \% current arrow
+    \item f[>\_]?= \% current arrow
+    \item l=<name> \% label
+    \item v=<volts>
+\end{itemize}
+... and <e\_type> $\in$: 
+\begin{multicols}{2}
+\begin{itemize}
+    \item R=
+    \item V=
+    \item C=
+    \item L=
+    \item rground
+    \item switch
+    \item isource
+    \item vcc
+    \item not port
+    \item npn
+    \item potentiometer
+    \item op amp
+\end{itemize}
+\end{multicols}
+... and can have names and units like:
+\begin{itemize}
+    \item <\textbackslash ohm>
+    \item <\textbackslash farad>
+    \item <\textbackslash siemens>
+\end{itemize}
+\textbf{Note:} can include \textbackslash coord's \& \textbackslash nodes at any place in circuit.  Doing so uses circuit coordinate system.  Many more circuit <e\_type>s available, see \href{https://www.overleaf.com/learn/latex/CircuiTikz_package}{here}; and stylizing options, see \href{http://mirrors.ctan.org/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf}{documentation}.
+
+\ \\

@@ -1,0 +1,63 @@
+\section{\href{http://mirrors.ctan.org/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf}{Pgfplots}}
+Basic structure:\\
+\begin{minipage}{6.5cm}
+\begin{lstlisting}
+\begin{tikzpicture}
+  \begin{axis}[<ax_setting>*]
+    \addplot[+|3][<pl_setting>*]
+      <plot>
+    [\draw{...}]*
+    [\node{...}]*
+    [\legend[]]?
+\end{lstlisting}
+\end{minipage}
+... where <ax\_setting> $\in$: 
+\begin{multicols}{2}
+\begin{itemize}[label={}]
+    \item {[x|y]}[min|max]=\#
+    \item {[x|y]}label=<text>
+    \item {[x|y]}tick=\{...\}
+    \item {[x|y]}ticklabels=\{...\}
+    \item tick label style=
+    \item axis lines=
+    \item grid=[major|minor]
+    \item domain=\_:\_
+    \item mark=[*|...]
+    \item no marks
+    \item samples=\#
+\end{itemize}
+\end{multicols}
+... and <pl\_setting> $\in$: 
+\begin{multicols}{2}
+\begin{itemize}[label={}]
+    \item {[[ultra]thick]}
+    \item <color>
+    \item 
+\end{itemize}
+\end{multicols}
+... and <plot> $\in$:
+\begin{itemize}[label={}]
+    \item coordinates \{(<tuple>)*\}
+    \item fill between[...]
+    \item table \{file.dat\}
+    \item table \{<inline\_data>\}
+    \item \{<math\_expression>\}
+\end{itemize}
+Example: \\
+\begin{minipage}{6.5cm}
+\begin{lstlisting}
+\begin{tikzpicture}
+\begin{axis}
+[legend cell align=left,
+legend pos=outer north east]
+  \addplot coord's {(0,0) (1,1)};
+  \addplot coord's {(0,1) (1,2)};
+  \addplot coord's {(0,2) (1,3)};
+  \legend{a,fine,legend}
+\end{axis}
+\end{tikzpicture}
+\end{lstlisting}
+\end{minipage}
+
+Many examples \href{http://pgfplots.sourceforge.net/gallery.html}{\underline{here}}!
+ \ \\

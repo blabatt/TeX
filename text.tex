@@ -1,0 +1,255 @@
+\section{Text}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/font\_typefaces}{Font Size}}
+\textit{Magnify text using }\code{\textbackslash magstep\#}\textit{, but it is better to set font face size using }\code{\textbackslash font\textbackslash\dots at \#}\textit{ construct (below), or to use a macro like:}\\
+\begin{tabular}{@{}l l l}
+    {\tiny \textbackslash tiny}                 &
+    {\scriptsize \textbackslash scriptsize}     &
+    {\footnotesize \textbackslash footnotesize} \\
+    {\small \textbackslash small}               &
+    {\normalsize \textbackslash normalsize}     &
+    {\large \textbackslash large}               \\
+    {\Large \textbackslash Large}               &
+    {\LARGE \textbackslash LARGE}               &
+    {\huge  \textbackslash huge}                \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/Font_sizes,_families,_and_styles}{Font Family}}
+\begin{tabular}{l l l}
+{\rmfamily serif} & \textbackslash textrm \{\dots\} & \textbackslash rmfamily \\
+{\sffamily sans-serif} & \textbackslash textsf \{\dots\} & \textbackslash sffamily \\
+{\ttfamily typewriter} & \textbackslash texttt \{\dots\} & \textbackslash ttfamily \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Font Styles}
+{\footnotesize \begin{tabular}{@{}l l l l}
+    {\mdseries medium}                      &
+    \textbackslash textmd\{\dots\}          &
+    \textbackslash mdseries                 &
+    \{\textbackslash md\ \}                 \\
+    {\bfseries bold}                        &
+    \textbackslash textbf\{\dots\}          &
+    \textbackslash bfseries                 &
+    \{\textbackslash bf\ \}                 \\
+    {\upshape upright}                      &
+    \textbackslash textup\{\dots\}          &
+    \textbackslash upshape                  &
+    \{\textbackslash up\ \}                 \\
+    {\itshape italic}                       &
+    \textbackslash textit\{\dots\}          &
+    \textbackslash itshape                  &
+    \{\textbackslash it\ \}                 \\
+    {\slshape slanted}                      &
+    \textbackslash textsl\{\dots\}          &
+    \textbackslash slshape                  &
+    \{\textbackslash sl\ \}                 \\
+    {\scshape sml caps}                     &
+    \textbackslash textsc\{\dots\}          &
+    \textbackslash scshape                  &
+    \{\textbackslash sc\ \}                 \\
+\end{tabular}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/font_typefaces}{Fonts (\say{Typefaces})}}
+\textit{The \href{https://tug.org/FontCatalogue/}{font catalog} contains a long list of fonts which can only be used if compiling with XeLaTeX or LuaLaTex. Otherwise, normal \LaTeX\ only enables open fonts (see \href{https://tex.stackexchange.com/questions/25249/how-do-i-use-a-particular-font-for-a-small-section-of-text-in-my-document}{here}).}\\
+\entry{35mm}{\textbackslash usepackage\{fontspec\}}{catalog package}\\
+\entry{35mm}{\textbackslash font\textbackslash myft=cmr at 10pt}{raw \TeX\ alias}\\
+\entry{46mm}{\textbackslash newfontfamily\textbackslash myfont\{<font>\}}{{\footnotesize ibid, XeTeX}}\\
+\entry{35mm}{\{\textbackslash myfont \dots \}}{use the above}\\
+\entry{35mm}{\textbackslash setmainfont\{<font>\}}{set overall}\\
+\entry{35mm}{\textbackslash setsansfont\{<font>\}}{set sans overall}\\
+\entry{35mm}{\textbackslash setmonofont\{<font>\}}{set mono overall}\\
+
+
+
+{\small
+\begin{tabular}{@{}l l l}
+    {\qtb \footnotesize QTBlimpo}           &
+    {\qta QTArtiston}                       &
+    {\qtusa QTUSA-Uncial}                   \\
+    {\qtlino QTLinoscroll}                  &
+    {\qtok QTOKCorral}                      &
+    {\Fontauri Fontauri}                    \\
+    {\qtpal QTPalatine}                     &
+    {\pica pica}                            &
+    {\ocrfamily ocr}                        \\ 
+    {\qttech QTTechtone}                    &
+    {\fontseries{l}\selectfont lmodern}     &
+    {\qttime QTTimeOutline}                 \\
+\end{tabular}}
+
+
+
+%\entry{30mm}{}{}\\
+%\entry{30mm}{}{}\\
+%\entry{30mm}{}{}\\
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/subscripts_and_superscripts}{Font Decorations}}
+
+
+\entry{30mm}{\textbackslash underline\textbackslash ul\{text\}}{\href{https://alexwlchan.net/2017/10/latex-underlines/}{\underline{te}\ul{xt}}}\\
+\entry{30mm}{\textbackslash subscript\{text\}}{\textsubscript{text}}\\
+\entry{30mm}{\textbackslash superscript\{text\}}{\textsuperscript{text}}\\
+\entry{30mm}{\{\textbackslash color\{red\}text\}}{\href{http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf}{\color{red}text}}\\
+\entry{30mm}{\textbackslash hl\{text\}}{\hl{text}}\\
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://tex.stackexchange.com/tags/accents/info}{Accents}}
+\textit{If using XeLaTex and }\textbf{\href{https://ctan.org/pkg/fontenc}{fontenc}}\textit{ you can use the character code directly, rather than the following:}\\
+%
+\begin{comment}
+{\footnotesize
+\entry{35mm}{H\textbackslash\textasciicircum otel, na\textbackslash\textquotedbl\textbackslash i ve, \textbackslash\textquotesingle el\textbackslash\textquotesingle eve,}{H\^otel, na\"i ve, \'el\'eve,}\\
+\entry{35mm}{}{sm\o rrebr\o d, !'Se\~norita!,}\\
+\entry{35mm}{}{Sch\"onbrunner Schlo\ss{}}\\
+}
+\end{comment}
+%
+%
+{\footnotesize \begin{tabular}{@{}l @{\hspace{4mm}} l @{\hspace{4mm}} l @{\hspace{4mm}} l @{\hspace{4mm}} l}
+    \`o \,  \textbackslash\`{}o                 &
+    \'o \,  \textbackslash'o                    &
+    \^o \,  \textbackslash\textasciicircum o    &
+    \~o \,  \textbackslash\textasciitilde o     &
+    \=o \,  \textbackslash=o                    \\
+    \.o \,  \textbackslash.o                    &
+    \"o \,  \textbackslash"o                    &
+    \c o \, \textbackslash c o                  &
+    \u o \, \textbackslash u o                  &
+    \v o \, \textbackslash v o                  \\
+    \H o \, \textbackslash H o                  &
+    \d o \, \textbackslash d o                  &
+    \b o \, \textbackslash b o                  &
+    \t oo \, \textbackslash t oo                &
+    \oe \,  \textbackslash oe                   \\
+    \OE \,  \textbackslash OE                   &
+    \ae \,  \textbackslash ae                   &
+    \AE \,  \textbackslash AE                   &
+    \aa \,  \textbackslash aa                   &
+    \AA \,  \textbackslash AA                   \\
+    \o \,   \textbackslash e                    &
+    \O \,   \textbackslash O                    &
+    \l \,   \textbackslash l                    &
+    \L \,   \textbackslash L                    &
+    \i \,   \textbackslash i                    \\
+    \j \,   \textbackslash j                    &
+    !` \,   !\`{}                               &
+    ?` \,   ?\`{}                               &
+\end{tabular}}
+
+%\entry{35mm}{}{}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Characters (more \href{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{here})}
+
+
+\begin{minipage}{3cm}
+\begin{itemize}[label=\empty,leftmargin=*]
+    \item \textasciicircum \, \textbackslash textasciicircum
+    \item \textdagger \, \textbackslash textdagger
+    \item \textsection \, \textbackslash textsection
+    \item \checkmark \, \textbackslash checkmark
+    \item $\uparrow$ \, \$\textbackslash uparrow\$
+\end{itemize} 
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{itemize}[label={},leftmargin=*]
+    \item \textasciitilde \, \textbackslash textasciitilde
+    \item \textdaggerdbl \, \textbackslash textdaggerdbl
+    \item \textparagraph \, \textbackslash textparagraph
+    \item \textdegree \, \textbackslash textdegree
+    \item \textquotesingle \, \textbackslash textquotesingle
+\end{itemize} 
+\end{minipage}\ \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Quotations}
+
+\entry{30mm}{\`{}\`{}is a quote\textquotesingle\textquotesingle}{``is a quote''}\\
+\entry{40mm}{\`{}\`{}\`{}qts \`{}in\textquotesingle\textquotesingle qts'\textbackslash thinspace \textquotesingle\textquotesingle}{```qts `in'' qts'\thinspace''}\\
+\entry{30mm}{{\tt\char`\\say}\{is a quote\}}{quote altern.}\\
+\entry{48mm}{\textbackslash midinsert\textbackslash narrower \dots \textbackslash endinsert}{blkquote}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{http://mirrors.ctan.org/macros/latex/contrib/lipsum/lipsum.pdf}{Lorem Ipsem}}
+
+\entry{25mm}{\textbackslash blindtext[7]}{from pkg \href{http://mirrors.ctan.org/macros/latex/contrib/blindtext/blindtext.pdf}{\textbf{blindtext}}}\\
+\entry{25mm}{\textbackslash lipsum[2-4]}{from pkg \href{http://mirrors.ctan.org/macros/latex/contrib/lipsum/lipsum.pdf}{\textbf{lipsum}}}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Alignment}
+
+\entry{35mm}{\textbackslash centering}{center within group}\\
+\entry{35mm}{\textbackslash centerline\{\dots\}}{center envmt}\\
+\entry{35mm}{\textbackslash rightline\{\dots\}}{right justified}\\
+\entry{35mm}{\textbackslash hfil <text> \textbackslash hfil\textbackslash hfil}{$\sfrac{2}{3}$ to left}\\
+%\entry{35mm}{\textbackslash }{}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Characters}
+
+\entry{23mm}{\textbackslash char\textbackslash<schar>}{insert \ul{s}pecial \ul{char}}\\
+\entry{23mm}{\textasciicircum\textasciicircum<hex>}{insert char by <hex> code}\\[1mm]
+\textit{Primitive \smash{character\textsuperscript{\textdagger}} manipulation:}\\
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textbf{accent}              &
+    \textit{catcode}             &
+    \textbf{char}                &
+    \textit{chardef}             \\
+    \textit{endlinech'r}         &
+    \textit{esc'pechar}          &
+    \textit{lccode}              &
+    \textbf{lowercase}           \\
+    \textit{newlinech'r}        &
+    \textbf{number}              &
+    \textbf{rom'nnumeral}        &
+    \textit{sfcode}              \\
+    \textbf{string}              &
+    \textit{uccode}              &
+    \textbf{uppercase}           &
+\end{tabular}} \\
+\textit{Define your own, such as these keyboard icons:}\\
+\powerkey\,\returnkey\,\revreturnkey\,\esckey\,\tabkey\,\revtabkey\,\pencilkey\,\ejectkey\,\capslockkey\,\openapplekey\,\applekey\,\delkey\,\shiftkey\,\ctlkey\,\optkey\,\cmdkey\,
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Kerning \& Ligatures}
+
+\entry{25mm}{f\kern 1pt f $\to$ ff}{automatic \say{ligature}} \\
+\entry{25mm}{\textbackslash not\textbackslash kern-1pt =}{``kerning'' (DIY lig's): $\not$\kern-1pt =} \\
+\entry{25mm}{hey -{}- you}{ligature removal -\{\}-} \\
+\entry{25mm}{-\quad--\quad---\quad $-$}{dashes: - -{}- -{}-{}- \$-\$} \\[1mm]
+\textit{Kerning \smash{primitives\textsuperscript{\textdagger}}:}\\
+{\footnotesize\begin{tabular}{@{}l l l l}
+    \textbf{kern}            &
+    \textit{lastkern}        &
+    \textbf{lower}           &
+    \textbf{moveleft}        \\
+    \textbf{moveright}       &
+    \textbf{raise}           &
+    \textbf{unkern}          &
+\end{tabular}} \\[1mm]
+%\code{\textbackslash Smiley} \% \Smiley (\href{http://mirrors.ctan.org/graphics/pgf/contrib/tikzsymbols/tikzsymbols.pdf}{tikzsymbols} library) \\
+%\entry{30mm}{\cmd}{package menukeys}\\
+%

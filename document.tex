@@ -1,0 +1,99 @@
+\section{Document}
+
+\subsection*{\href{https://www.overleaf.com/learn/latex/headers\_and\_footers}{Headers \& Footers}}
+\textit{Use }\textbf{\href{http://mirrors.ctan.org/macros/latex/contrib/fancyhdr/fancyhdr.pdf}{fancyhdr}}\textit{ package to define a style: }\\
+\entry{45mm}{\textbackslash fancypagestyle\{appendix\}\{}{name style}\\
+\code{\phantom{\quad}\# now dictate customizations:}\\
+\code{\phantom{\quad}\textbackslash fancyhead[RO,LE]\{header \textbackslash thepage\}}\\
+\code{\phantom{\quad}\textbackslash renewcommand{\textbackslash headrulewidth}{0pt}}\\
+\code{\}}\\
+\textit{\dots and then declare its use: }\\
+\entry{38mm}{\textbackslash pagestyle\{appendix\}}{for all pages}\\
+\entry{38mm}{\textbackslash thispagestyle\{addendix\}}{this page only}\\
+
+%\entry{35mm}{\textbackslash }{}\\
+%\entry{35mm}{\textbackslash }{}\\
+%\entry{35mm}{\textbackslash }{}\\
+%\entry{35mm}{\textbackslash }{}\\
+%\entry{35mm}{\textbackslash }{}\\
+%\entry{25mm}{}{}\\
+%\entry{25mm}{}{}\\
+%\entry{25mm}{}{}\\
+%\entry{25mm}{}{}\\
+%\entry{25mm}{}{}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Document Types}
+
+\entry{35mm}{\textbackslash documentclass\{<type>\}}{set type, $\in$:}\\
+\begin{tabular}{l l l l}
+    article     & 
+    report      &
+    extreport   &
+    slides      \\
+    amsart      &
+    beamer      &
+    book        &
+\end{tabular}%
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/sections\_and\_chapters}{Sections \& Contents}}
+\textit{Designate organization ([sub*]sections) inline: }\\
+\entry{35mm}{\textbackslash part\{<name>\}}{level 1}\\
+\entry{35mm}{\textbackslash chapter\{<name>\}}{level 2}\\
+\entry{35mm}{\textbackslash section\{<name>\}}{level 3}\\
+\entry{35mm}{\textbackslash subsection\{<name>\}}{level 4}\\
+
+\textit{For a table of contents, use }\href{http://mirrors.ctan.org/macros/latex/contrib/titlesec/titlesec.pdf}{\code{\textbackslash tableofcontents}}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Layout}
+
+\code{\textbackslash usepackage\{geometry\}[margin=5mm]}\\
+\entry{40mm}{\textbackslash documentclass[\href{http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf}{landscape}]}{landscape}\\
+\entry{40mm}{\textbackslash vfill\textbackslash,}{flush, vertically}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Spacing, Rules, Pagination}
+
+\entry{25mm}{\textbackslash thepage}{current page number}\\
+\entry{25mm}{\textbackslash newpage}{page break}\\
+\entry{25mm}{\textbackslash clearpage}{page break}\\
+\entry{25mm}{\textbackslash vspace\{3mm\}}{vertical separation}\\
+\entry{25mm}{\textbackslash hspace\{4mm\}}{horizontal separation}\\
+
+\textit{Some }\textbf{hspace}\textit{ aliases (macros):}\\
+\code{\textbackslash enskip \enskip \textbackslash thinspace \thinspace \textbackslash quad \quad \textbackslash qquad}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://tex.stackexchange.com/questions/2193/how-to-reference-the-page-of-a-figure}{Page Anchors (\say{References})}}
+
+\entry{35mm}{\textbackslash label\{<name>\}}{place anchor}\\
+\entry{35mm}{\textbackslash ref\{<name>\}}{point to anchor}\\
+\entry{35mm}{\textbackslash pageref\{<name>\}}{page \# of ref}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/Footnotes}{Footnotes}}
+
+
+\entry{25mm}{\textbackslash footnote\{\dots\}}{basic use}\\
+\entry{25mm}{\textbackslash footnote[3]\{\dots\}}{micromanage foot num}\\
+\entry{25mm}{\textbackslash thefootnote}{last foot \#}\\
+\textit{Set style as follows:}\\
+\code{\textbackslash renewc'md\{\textbackslash thefootnote\}\{\textbackslash roman\{footnote\}\}}\\
+
+\textit{Use symbols rather than numbers (from \href{https://tex.stackexchange.com/questions/826/symbols-instead-of-numbers-as-footnote-markers}{here}):}\\
+\href{http://mirrors.ctan.org/macros/latex/contrib/footmisc/footmisc.pdf}{\code{\textbackslash usepackage[symbol]\{footmisc\}}}\\
+\code{\textbackslash renewc'md\{\textbackslash thefootnote\}\{\textbackslash fnsymbol\{footnote\}}\\
+\entry{35mm}{\textbackslash footnote[<num>]\{text\}}{<num> $\in$: 1-9}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Overlays}

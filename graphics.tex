@@ -1,0 +1,30 @@
+\section{\href{http://mirrors.ctan.org/macros/latex/required/graphics/graphics.pdf}{Graphics}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Inclusion}
+\entry{40mm}{\textbackslash includegraphics\{a.jpg\}}{basic invocation}\\
+\entry{46mm}{\textbackslash includegraphics[5,10][2,2]\{a.jpg\}}{specific loc.}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Positioning}
+\code{scalebox}\textit{ and }\code{resizebox}\textit{ resize content to arguments. Use \say{!} in one of }{\tt<h-scl>}, {\tt<v-scl>}\textit{ (while setting the other) to retain aspect ratio.}\\
+\code{\textbackslash scalebox\{<h-scl>\}\{<v-scl>\}\{\dots\}}\\
+\code{\textbackslash resizebox\{<h-scl>\}\{<v-scl>\}\{\dots\}}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Rotation}
+\entry{35mm}{\textbackslash rotatebox\{90\}\{text\}}{\ang{90} rotat'n}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\href{https://www.overleaf.com/learn/latex/wrapping_text_around_figures}{Wrapping}}
+
+\entry{43mm}{\textbackslash begin\{wrapfigure\}[9]\{l\}\{3cm\}}{3 wide, 9 lines}\\
+\entry{39mm}{\phantom{\quad}\textbackslash vspace\{-3mm\}}{micromanage}\\
+\entry{39mm}{\phantom{\quad}\textbackslash includegraphics[]\{...jpg\}}{fig to wrap}\\
+\entry{39mm}{\textbackslash end\{wrapfigure\}}{close out}\\
+

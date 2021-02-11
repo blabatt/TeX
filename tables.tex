@@ -1,0 +1,49 @@
+\section{\href{https://www.overleaf.com/learn/latex/lists}{Lists} and \href{https://www.overleaf.com/learn/latex/tables}{Tables}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{enumerate}
+\entry{40mm}{\textbackslash begin\{enumerate\}}{begin}\\
+\entry{40mm}{\phantom{\quad}\textbackslash item \dots}{unnumbered}\\
+\entry{40mm}{\textbackslash end\{enumerate\}}{end}\\[1mm]
+\textit{Can nest lists and mix }\textbf{enumerate}\textit{ and }\textbf{itemize}\textit{ nested lists. To change numbering style:}\\
+\code{ \textbackslash renewcommand\{\textbackslash labelenumii\}\{\textbackslash Roman\{enumii\}}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{itemize}
+\textit{Same format as }\textbf{enumerate}:\\
+\entry{40mm}{\textbackslash begin\{itemize\}}{begin}\\
+\entry{40mm}{\phantom{\quad}[topsep=8pt,itemsep=4pt,}{some params}\\
+\entry{40mm}{\phantom{\quad}parsep=4pt,leftmargin=*]}{\dots and more}\\
+\entry{40mm}{\phantom{\quad}\textbackslash item \dots}{}\\
+\entry{40mm}{\textbackslash end\{itemize\}}{end}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\smash{\href{https://en.wikibooks.org/wiki/LaTeX/Tables}{tabular}\textsuperscript{\LaTeX}}}
+
+
+\entry{32mm}{\textbackslash begin\{tabular\}\{r r r\}}{3 \ul{r}ight cols}\\
+\entry{32mm}{\textbackslash multicolumn\{2\}\{c\}}{2-col spread (\ul{c}ent'd)}\\
+%\entry{35mm}{}{}\\
+%\entry{35mm}{}{}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{\smash{\href{}{Table Primitives}\textsuperscript{\textdagger}}}
+
+{\scriptsize\begin{tabular}{@{}l l l l l}
+    \textbf{cr}                  &
+    \textbf{crcr}                &
+    \textit{everycr}             &
+    \textbf{halign}              &
+    \textbf{noalign}             &
+    \textbf{omit}                &
+    \textbf{span}                &
+    \textit{tabskip}             &
+    \textbf{valign}              &
+\end{tabular}} \\[1mm]
+
+
+\ \\
