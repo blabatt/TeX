@@ -156,7 +156,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Characters (more \href{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{here})}
 
-
 \begin{minipage}{3cm}
 \begin{itemize}[label=\empty,leftmargin=*]
     \item \textasciicircum \, \textbackslash textasciicircum
@@ -174,7 +173,46 @@
     \item \textdegree \, \textbackslash textdegree
     \item \textquotesingle \, \textbackslash textquotesingle
 \end{itemize} 
-\end{minipage}\ \\
+\end{minipage}\ \\[1mm]
+%
+\textit{$\exists$ \href{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{thousands of wilder symbols}, including:} \\%
+\entry{45mm}{\FallingEdge\PulseHigh\LongPulseHigh\ShortPulseHigh\PulseLow\LongPulseLow}{signals}\\
+%\entry{45mm}{\NANDl\ORd\ORl\INVu\BUFr\BUFd\ORr}{electronic}\\
+\entry{45mm}{\epsdice{1}\epsdice{2}\epsdice{6}\epsdice{4}\quad}{\href{google.com}{dice}}\\
+\entry{45mm}{$\phonon\pionminus\quad\antiproton\antiquark\antiquarkt\quad\proton\Higgsboson\Kaonnull\Dmesonplus\quad\spin\spindown$}{\href{http://mirrors.ctan.org/fonts/svrsymbols/svrsymbols.pdf}{particles}}\\
+\entry{45mm}{\Esc\PrtSc\Enter\Del\End}{\href{https://ctan.org/pkg/keystroke}{keys}}\\
+%\entry{45mm}{}{emojis}\\
+\entry{45mm}{\pmglyph{\HAi\HGxxxvi\HVxxxi} \quad\EOMountain\EOandThen\EOta}{\href{http://mirrors.ctan.org/fonts/archaic/hieroglf/hieroglf.pdf}{E}, \href{http://mirrors.ctan.org/language/epiolmec/var/GlyphAccessCommands.pdf}{O} runes}\\
+\entry{45mm}{\Mercury\Jupiter\Neptune\quad\Moon\Sun\quad\Aries\Cancer\Aquarius\Leo}{\href{http://mirrors.ctan.org/fonts/marvosym/doc/fonts/marvosym/marvodoc.pdf}{zodiac}}\\
+\entry{45mm}{\clefF \, \halfNote \, \thirtysecondNote \, \threeBeamedQuavers \, \natural \, \sharp}{\href{http://mirrors.ctan.org/macros/unicodetex/latex/lilyglyphs/documentation/lilyglyphs.pdf}{musical}}\\[1mm]
+%\entry{45mm}{}{var. math}\\
+%\entry{45mm}{}{countries}\\
+%
+\textit{For native characters (UTF-8 encoded ASCII), you can use keyboard characters or, masochistically, enter the ASCII code (in hex or octal):}\\
+\entry{23mm}{\textbackslash char\textbackslash<schar>}{insert \ul{s}pecial \ul{char}}\\
+\entry{23mm}{\textasciicircum\textasciicircum<hex>}{insert char by <hex> code}\\[2mm]
+%
+\textit{Primitive \smash{character\textsuperscript{\textdagger}} manipulation:}\\
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textbf{accent}              &
+    \textit{catcode}             &
+    \textbf{char}                &
+    \textit{chardef}             \\
+    \textit{endlinech'r}         &
+    \textit{esc'pechar}          &
+    \textit{lccode}              &
+    \textbf{lowercase}           \\
+    \textit{newlinech'r}        &
+    \textbf{number}              &
+    \textbf{rom'nnumeral}        &
+    \textit{sfcode}              \\
+    \textbf{string}              &
+    \textit{uccode}              &
+    \textbf{uppercase}           &
+\end{tabular}} \\[1mm]
+%
+\textit{Define your own, such as these keyboard icons:}\\
+\powerkey\,\returnkey\,\revreturnkey\,\esckey\,\tabkey\,\revtabkey\,\pencilkey\,\ejectkey\,\capslockkey\,\openapplekey\,\applekey\,\delkey\,\shiftkey\,\ctlkey\,\optkey\,\cmdkey\,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,42 +242,13 @@
 %\entry{35mm}{\textbackslash }{}\\
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Characters}
-
-\entry{23mm}{\textbackslash char\textbackslash<schar>}{insert \ul{s}pecial \ul{char}}\\
-\entry{23mm}{\textasciicircum\textasciicircum<hex>}{insert char by <hex> code}\\[1mm]
-\textit{Primitive \smash{character\textsuperscript{\textdagger}} manipulation:}\\
-{\scriptsize\begin{tabular}{@{}l l l l}
-    \textbf{accent}              &
-    \textit{catcode}             &
-    \textbf{char}                &
-    \textit{chardef}             \\
-    \textit{endlinech'r}         &
-    \textit{esc'pechar}          &
-    \textit{lccode}              &
-    \textbf{lowercase}           \\
-    \textit{newlinech'r}        &
-    \textbf{number}              &
-    \textbf{rom'nnumeral}        &
-    \textit{sfcode}              \\
-    \textbf{string}              &
-    \textit{uccode}              &
-    \textbf{uppercase}           &
-\end{tabular}} \\
-\textit{Define your own, such as these keyboard icons:}\\
-\powerkey\,\returnkey\,\revreturnkey\,\esckey\,\tabkey\,\revtabkey\,\pencilkey\,\ejectkey\,\capslockkey\,\openapplekey\,\applekey\,\delkey\,\shiftkey\,\ctlkey\,\optkey\,\cmdkey\,
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Kerning \& Ligatures}
 
 \entry{25mm}{f\kern 1pt f $\to$ ff}{automatic \say{ligature}} \\
 \entry{25mm}{\textbackslash not\textbackslash kern-1pt =}{``kerning'' (DIY lig's): $\not$\kern-1pt =} \\
 \entry{25mm}{hey -{}- you}{ligature removal -\{\}-} \\
-\entry{25mm}{-\quad--\quad---\quad $-$}{dashes: - -{}- -{}-{}- \$-\$} \\[1mm]
+\entry{25mm}{-\quad--\quad---\quad $-$}{dashes: - -{}- -{}-{}- \$-\$} \\[2mm]
 \textit{Kerning \smash{primitives\textsuperscript{\textdagger}}:}\\
 {\footnotesize\begin{tabular}{@{}l l l l}
     \textbf{kern}            &
