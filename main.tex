@@ -18,9 +18,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{tcolorbox}
 \usepackage{dirtytalk}
 \usepackage{verbatim}
-\usepackage{tcolorbox}
 %\usepackage{fancyvrb}
 \usepackage{listings}
 \usepackage{xifthen}
@@ -179,7 +179,8 @@ by~Blair~Labatt~III,~page~\thepage~of~2
 
 
 \def\primtex#1{\href{https://www.tug.org/utilities/plain/cseq.html\##1-rp}{#1}}
-%\def\primtex#1#2{\href{\primtexA{#1-#2}}{#1}}
+%\def\primtexA#1#2{test #2-rp \dots #1}
+\def\primtexA#1#2{\href{https://www.tug.org/utilities/plain/cseq.html\##2-rp}{#1}}
 
 
 
