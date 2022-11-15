@@ -4,10 +4,55 @@
 \mycolX{40mm}{\code{\textbackslash input\{file.tex\}}} \% insert content \\
 \mycolX{40mm}{\code{\textbackslash include\{file.tex\}}} \% see diff \href{https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include}{here} \\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Macros}
+
+\textit{Macro defs \say{expand} into \say{replacement} text:}\\
+\entry{40mm}{\textbackslash def\textbackslash x\{5.0\}}{simple replace}\\
+\entry{40mm}{\textbackslash def\textbackslash double\#1\{\#1*2\}}{one param}\\
+\entry{40mm}{\textbackslash def\textbackslash times\#1\#2\{\#1*\#2\}}{multip. params}\\
+\entry{51mm}{\textbackslash definecolor\textbackslash \{grn\}\{HTML\}\{228822\}}{colors}\\
+\entry{51mm}{\textbackslash colorlet\textbackslash \{prpl\}\{purple!80!pink\}}{ibid}\\[1mm]
+\textit{\LaTeX\ provides for multi-line \say{environment} defs:}\\
+\entry{40mm}{\textbackslash newenvironment\{myenv\}[1]}{one param}\\
+\entry{40mm}{\phantom{\quad}\{\dots\}}{initializt'n cmds}\\
+\entry{40mm}{\phantom{\quad}\{\dots\}}{closing cmds}\\
+
+
+
+{\scriptsize\begin{tabular}{@{}l l l l}
+    \textbf{\primtexA{aft.assign.}{afterassignment}}         &
+    \textbf{\primtexA{aft.group}{aftergroup}}           &
+    \textbf{\primtex{begingroup}}          &
+    \textbf{\primtex{csname}}              \\
+    \textbf{\primtex{def}}                 &
+    \textbf{\primtex{edef}}                &
+    \textbf{\primtex{endcsname}}           &
+    \textbf{\primtex{endgroup}}            \\
+    \textbf{\primtexA{expandaft.}{expandafter}}          &
+    \textbf{\primtex{futurelet}}           &
+    \textbf{\primtex{gdef}}                &
+    \textbf{\primtex{global}}              \\
+    \textit{\primtex{globaldefs}}          &
+    \textbf{\primtex{let}}                 &
+    \textbf{\primtex{long}}                &
+    \textbf{\primtex{noexpand}}            \\
+    \textbf{\primtex{outer}}               &
+    \textbf{\primtex{relax}}               &
+    \textbf{\primtex{the}}                 &
+    \textbf{\primtex{xdef}}                \\
+\end{tabular}} \\
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{\smash{Logical Primitives\textsuperscript{\textdagger}}}
+\subsection*{Logic \& Loops}
+
+\entry{38mm}{\textbackslash ifnum\textbackslash balance=0 \dots \textbackslash fi}{simple compare}\\
+\entry{38mm}{\textbackslash ifnum\textbackslash count0<100 \dots \textbackslash fi}{register compare}\\
+\entry{38mm}{\textbackslash ifdim\textbackslash hsize>100pt \dots \textbackslash fi}{another if type}\\
+\entry{38mm}{\textbackslash newif\textbackslash ifabc}{define own if-type}\\
+\entry{42mm}{\textbackslash loop $\alpha$\textbackslash if<cond> $\beta$ \textbackslash repeat}{repeat $\beta$}\\
 
 {\scriptsize\begin{tabular}{@{}l l l l l}
     \textbf{\primtex{else}}            &
@@ -33,35 +78,17 @@
 \end{tabular}} \\
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{\smash{Macro Primitives\textsuperscript{\textdagger}}}
-
-{\scriptsize\begin{tabular}{@{}l l l l}
-    \textbf{\primtex{aft.assign.}}         &
-    \textbf{\primtex{aft.group}}           &
-    \textbf{\primtex{begingroup}}          &
-    \textbf{\primtex{csname}}              \\
-    \textbf{\primtex{def}}                 &
-    \textbf{\primtex{edef}}                &
-    \textbf{\primtex{endcsname}}           &
-    \textbf{\primtex{endgroup}}            \\
-    \textbf{\primtex{expandaft.}}          &
-    \textbf{\primtex{futurelet}}           &
-    \textbf{\primtex{gdef}}                &
-    \textbf{\primtex{global}}              \\
-    \textit{\primtex{globaldefs}}          &
-    \textbf{\primtex{let}}                 &
-    \textbf{\primtex{long}}                &
-    \textbf{\primtex{noexpand}}            \\
-    \textbf{\primtex{outer}}               &
-    \textbf{\primtex{relax}}               &
-    \textbf{\primtex{the}}                 &
-    \textbf{\primtex{xdef}}                \\
-\end{tabular}} \\
+% TODO: \loop \repeat structure
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{\smash{Register Primitives\textsuperscript{\textdagger}}}
+\subsection*{Registers}
+\textit{Each type (count, dimen, skip, muskip, toks) $\ni$ 255 registers. Access these directly, or, preferably, define an alias for what you'll use. Groups (\{\}) create a lexical stack of new registers.}\\
+\entry{35mm}{\textbackslash count5=123}{set register}\\
+\entry{35mm}{\textbackslash advance\textbackslash count by 1}{mutate register}\\
+\entry{35mm}{\textbackslash multiply\textbackslash dimen4 by 3}{another mutate}\\
+\entry{35mm}{\textbackslash newcount\textbackslash myname}{\say{reserve} a reg}\\
+
 
 {\scriptsize\begin{tabular}{@{}l l l l}
     \textbf{\primtex{advance}}             &
@@ -77,40 +104,6 @@
     \textbf{\primtex{toksdef}}             &
 \end{tabular}} \\
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Conditionals}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Looping}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Variables \& Parameters}
-
-\entry{40mm}{\textbackslash def\textbackslash x\{5.0\}}{simple replace}\\
-\entry{40mm}{\textbackslash def\textbackslash double\#1\{\#1*2\}}{one param}\\
-\entry{40mm}{\textbackslash def\textbackslash times\#1\#2\{\#1*\#2\}}{multip. params}\\
-\entry{51mm}{\textbackslash definecolor\textbackslash \{grn\}\{HTML\}\{228822\}}{colors}\\
-\entry{51mm}{\textbackslash colorlet\textbackslash \{prpl\}\{purple!80!pink\}}{ibid}\\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Environments}
-\textit{Define new environment, 1 parameter:}\\
-\entry{40mm}{\textbackslash newenvironment\{myenv\}[1]}{one param}\\
-\entry{40mm}{\phantom{\quad}\{\dots\}}{initializ. cmds}\\
-\entry{40mm}{\phantom{\quad}\{\dots\}}{closing cmds}\\
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Functions}
-
-\textit{Making some edits}
 
 \ \\
 

@@ -249,7 +249,9 @@
 $\overbrace{x=y}$ &  \textbackslash overbrace\{x=y\} \\
 $\begin{cases} a \\ b \end{cases}$ & \textbackslash begin\{cases\}... \\
 $\begin{rcases} a \\ b \end{rcases}$ & \textbackslash begin\{rcases\}... [\href{https://tex.stackexchange.com/questions/385148/spacing-in-cases}{align issue}]\\
+$\underset{\bf A}\dots$ & \textbackslash underset\{ \} \\
 $\boxed{e=mc^2}$ & \textbackslash boxed ... \\
+
 %$\begin{drcases} a \\ b \end{drcases}$ \\
 
 \end{tabular}\ \\
@@ -275,23 +277,23 @@ $\boxed{e=mc^2}$ & \textbackslash boxed ... \\
 
 {\scriptsize\begin{tabular}{@{}l l l}
     \textbf{\primtex{above}}               &
-    \textit{\primtex{ab'vdisp.s.s.}}       &
-    \textit{\primtex{ab'vdisk.skp}}        &
-    \textbf{\primtex{ab'vw'thdelims}}      &
+    \textit{\primtexA{abv.disp.sk.s.}{abovedisplayshortskip}}       &
+    \textit{\primtexA{ab'vdisk.skp}{abovedisplayskip}}        &
+    \textbf{\primtexA{ab'vw'thdelims}{abovewithdelims}}      &
     \textbf{\primtex{atop}}                &
     \textbf{\primtex{atopwithdelims}}      &
-    \textit{\primtex{bel.disp.s.s.}}       &
-    \textit{\primtex{bel.disp.skp}}        &
+    \textit{\primtexA{bel.disp.s.s.}{belowdisplayshortskip}}       &
+    \textit{\primtexA{bel.disp.skp}{belowdisplayskip}}        &
     \textit{\primtex{binoppenalty}}        &
-    \textit{\primtex{def'ltskewchar}}      &
+    \textit{\primtexA{def'ltskewchar}{defaultskewchar}}      &
     \textit{\primtex{delcode}}             &
     \textbf{\primtex{delimiter}}           &
-    \textit{\primtex{delim.factor}}        &
-    \textit{\primtex{delim.shortfall}}     &
+    \textit{\primtexA{delim.factor}{delimiterfactor}}        &
+    \textit{\primtexA{delim.shortfall}{delimitershortfall}}     &
     \textit{\primtex{displayindent}}       &
     \textbf{\primtex{displaylimits}}       &
     \textbf{\primtex{displaystyle}}        &
-    \textit{\primtex{disp.win.pen.}}       &
+    \textit{\primtexA{disp.win.pen.}{displaywindowpenalty}}       &
     \textit{\primtex{displaywidth}}        &
     \textbf{\primtex{eqno}}                &
     \textit{\primtex{everydisplay}}        &
@@ -313,7 +315,7 @@ $\boxed{e=mc^2}$ & \textbackslash boxed ... \\
     \textbf{\primtex{mathord}}             &
     \textbf{\primtex{mathpunct}}           &
     \textbf{\primtex{mathrel}}             &
-    \textit{\primtex{mathsurrn'd}}         &
+    \textit{\primtexA{mathsurrn'd}{mathsurround}}         &
     \textit{\primtex{medmuskip}}           &
     \textbf{\primtex{mkern}}               &
     \textbf{\primtex{mskip}}               &
@@ -321,19 +323,19 @@ $\boxed{e=mc^2}$ & \textbackslash boxed ... \\
     \textbf{\primtex{muskipdef}}           &
     \textbf{\primtex{nolimits}}            &
     \textbf{\primtex{nonscript}}           &
-    \textit{\primtex{nulldelmt'rsp'c}}     &
+    \textit{\primtexA{nulldelmt'rsp'c}{nulldelimiterspace}}     &
     \textbf{\primtex{over}}                &
     \textbf{\primtex{overline}}            &
-    \textbf{\primtex{overwithdl'ms}}       &
-    \textit{\primtex{postdisp.pen.}}       &
-    \textit{\primtex{predisp.pen.}}        &
-    \textit{\primtex{predisp.size}}        &
+    \textbf{\primtexA{overwithdl'ms}{overwithdelims}}       &
+    \textit{\primtexA{postdisp.pen.}{postdisplaypenalty}}       &
+    \textit{\primtexA{predisp.pen.}{predisplaypenalty}}        &
+    \textit{\primtexA{predisp.size}{predisplaysize}}        &
     \textbf{\primtex{radical}}             &
     \textit{\primtex{relpenalty}}          &
     \textbf{\primtex{right}}               &
     \textit{\primtex{scriptfont}}          &
-    \textit{\primtex{script'''font}}       &
-    \textbf{\primtex{script'''tstyle}}     &
+    \textit{\primtexA{script'''font}{scriptscriptfont}}       &
+    \textbf{\primtexA{script'''tstyle}{scriptscriptstyle}}     &
     \textbf{\primtex{scriptspace}}         &
     \textbf{\primtex{scriptstyle}}         &
     \textit{\primtex{skewchar}}            &

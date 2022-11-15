@@ -1,5 +1,5 @@
 \section{Alignment}
-\textit{\TeX\ \say{glues} horizontal and then vertical \say{boxes} together to make lines, paragraphs / pages (respectively). \TeX\ \smash{primitives\textsuperscript{\textdagger}} (\textbf{cmds} \& \textit{params}) afford fine-grained control of placement.}
+\textit{\TeX\ \say{glues} horizontal and then vertical \say{boxes} together to make lines, paragraphs / pages (respectively). \TeX\ \smash{primitives\textsuperscript{\textdagger}} (\textbf{cmds} \& \textit{params}) afford fine-grained control of placement. For narrow eqn, force box height / depth to 0pt with }\texttt{\textbackslash smash}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{\href{https://en.wikibooks.org/wiki/LaTeX/Boxes}{Boxes}\textsuperscript{\textdagger}}
@@ -65,9 +65,9 @@
     \textit{\primtex{hoffset}}         &
     \textit{\primtex{maxdepth}}        &
     \textit{\primtex{pagedepth}}       &
-    \textit{\primtex{p'filllstretch}}  \\
-    \textit{\primtex{p'fillstretch}}   &
-    \textit{\primtex{p'filstretch}}    &
+    \textit{\primtexA{p'filllstretch}{pagefilllstretch}}  \\
+    \textit{\primtexA{p'fillstretch}{pagefillstretch}}   &
+    \textit{\primtexA{p'filstretch}{pagefilstretch}}    &
     \textit{\primtex{pagegoal}}        &
     \textit{\primtex{pageshrink}}      \\
     \textit{\primtex{pagestretch}}     &
@@ -85,16 +85,16 @@
 {\scriptsize\begin{tabular}{@{}l l l l}
     \textit{\primtex{adjdemerits}}         &
     \textit{\primtex{baselineskip}}        &
-    \textit{\primtex{d'blhyp.d's}}         &
-    \textit{\primtex{emerg.stretch}}       \\
-    \textit{\primtex{fin.hyph.d's}}        &
+    \textit{\primtexA{d'blhyp.d's}{doublehyphendemerits}}         &
+    \textit{\primtexA{emerg.stretch}{emergencystretch}}       \\
+    \textit{\primtexA{fin.hyph.d's}{finalhyphendemerits}}        &
     \textit{\primtex{hangafter}}           &
     \textit{\primtex{hsize}}               &
     \textbf{\primtex{ignorespaces}}        \\
     \textbf{\primtex{indent}}              &
     \textit{\primtex{leftskip}}            &
     \textit{\primtex{lineskip}}            &
-    \textit{\primtex{linesk.lim}}          \\
+    \textit{\primtexA{linesk.lim}{lineskiplimit}}          \\
     \textit{\primtex{looseness}}           &
     \textbf{\primtex{noboundary}}          &
     \textbf{\primtex{noindent}}            &
